@@ -3,441 +3,113 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Devesh Jani —  Aspiring Systems & Hardware Engineer</title>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<title>Devesh Jani</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
-  :root {
-    --bg: #f7f6f3;
-    --surface: #ffffff;
-    --border: #e2e0da;
-    --border2: #d0cdc6;
-    --accent: #1a6b4a;
-    --accent-light: #e8f3ee;
-    --text: #1c1c1c;
-    --muted: #6b6860;
-    --sans: 'IBM Plex Sans', sans-serif;
-    --mono: 'IBM Plex Mono', monospace;
-  }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: var(--sans);
-    font-size: 15px;
-    line-height: 1.6;
-  }
-
-  nav {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: var(--bg);
-    border-bottom: 1px solid var(--border);
-    padding: 0 3rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 52px;
-  }
-
-  .nav-logo {
-    font-family: var(--mono);
-    font-size: 0.8rem;
-    font-weight: 500;
-    color: var(--text);
-  }
-
-  .nav-links {
-    display: flex;
-    gap: 2.5rem;
-    list-style: none;
-  }
-
-  .nav-links a {
-    font-size: 0.8rem;
-    color: var(--muted);
-    text-decoration: none;
-    transition: color 0.15s;
-  }
-
-  .nav-links a:hover { color: var(--accent); }
-
-  .container {
-    max-width: 860px;
-    margin: 0 auto;
-    padding: 0 2rem;
-  }
-
-  .hero {
-    padding: 5rem 0 4rem;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .hero-tag {
-    font-family: var(--mono);
-    font-size: 0.72rem;
-    color: var(--accent);
-    letter-spacing: 0.06em;
-    margin-bottom: 1.25rem;
-  }
-
-  .hero h1 {
-    font-size: 2.6rem;
-    font-weight: 700;
-    letter-spacing: -0.03em;
-    line-height: 1.15;
-    margin-bottom: 1.25rem;
-    color: #0f0f0f;
-  }
-
-  .hero-desc {
-    font-size: 0.95rem;
-    color: var(--muted);
-    max-width: 520px;
-    line-height: 1.75;
-    margin-bottom: 2rem;
-  }
-
-  .hero-links {
-    display: flex;
-    gap: 0.75rem;
-    flex-wrap: wrap;
-  }
-
-  .btn {
-    font-family: var(--mono);
-    font-size: 0.72rem;
-    letter-spacing: 0.04em;
-    padding: 0.55rem 1.1rem;
-    text-decoration: none;
-    transition: all 0.15s;
-    border: 1px solid;
-  }
-
-  .btn-primary {
-    background: var(--accent);
-    color: #fff;
-    border-color: var(--accent);
-  }
-
-  .btn-primary:hover { opacity: 0.85; }
-
-  .btn-secondary {
-    background: transparent;
-    color: var(--muted);
-    border-color: var(--border2);
-  }
-
-  .btn-secondary:hover { color: var(--accent); border-color: var(--accent); }
-
-  .section {
-    padding: 3.5rem 0;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .section:last-child { border-bottom: none; }
-
-  .section-label {
-    font-family: var(--mono);
-    font-size: 0.68rem;
-    font-weight: 500;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: #2a2a2a;
-    margin-bottom: 2rem;
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-  }
-
-  .section-label::after {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background: var(--border);
-  }
-
-  /* EDUCATION */
-  .edu-list { display: flex; flex-direction: column; gap: 1.75rem; }
-
-  .edu-item {
-    display: grid;
-    grid-template-columns: 1fr auto;
-  }
-
-  .edu-school { font-weight: 700; font-size: 0.92rem; color: #0f0f0f; }
-
-  .edu-degree {
-    font-size: 0.83rem;
-    color: var(--muted);
-    margin-top: 0.2rem;
-    line-height: 1.5;
-  }
-
-  .edu-gpa {
-    font-family: var(--mono);
-    font-size: 0.68rem;
-    color: var(--accent);
-    margin-top: 0.3rem;
-  }
-
-  .edu-date {
-    font-family: var(--mono);
-    font-size: 0.68rem;
-    color: var(--muted);
-    text-align: right;
-    white-space: nowrap;
-  }
-
-  /* EXPERIENCE */
-  .exp-list { display: flex; flex-direction: column; gap: 2.25rem; }
-
-  .exp-item {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 0.2rem 1rem;
-  }
-
-  .exp-role { font-weight: 700; font-size: 0.92rem; color: #0f0f0f; }
-
-  .exp-company {
-    font-family: var(--mono);
-    font-size: 0.7rem;
-    color: var(--accent);
-    margin-bottom: 0.75rem;
-  }
-
-  .exp-date {
-    font-family: var(--mono);
-    font-size: 0.68rem;
-    color: var(--muted);
-    text-align: right;
-    white-space: nowrap;
-    padding-top: 0.1rem;
-  }
-
-  .exp-bullets {
-    grid-column: 1 / -1;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .exp-bullets li {
-    font-size: 0.85rem;
-    color: var(--muted);
-    line-height: 1.7;
-    padding-left: 1rem;
-    position: relative;
-  }
-
-  .exp-bullets li::before {
-    content: '–';
-    position: absolute;
-    left: 0;
-    color: var(--border2);
-  }
-
-  /* RESEARCH */
-  .research-list { display: flex; flex-direction: column; gap: 2rem; }
-
-  .research-item {
-    display: grid;
-    grid-template-columns: 2.5rem 1fr;
-    gap: 0 1.25rem;
-  }
-
-  .research-num {
-    font-family: var(--mono);
-    font-size: 0.68rem;
-    color: var(--border2);
-    padding-top: 0.15rem;
-  }
-
-  .research-title {
-    font-weight: 700;
-    font-size: 0.9rem;
-    margin-bottom: 0.2rem;
-    color: #0f0f0f;
-  }
-
-  .research-meta {
-    font-family: var(--mono);
-    font-size: 0.68rem;
-    color: var(--accent);
-    margin-bottom: 0.5rem;
-  }
-
-  .research-desc {
-    font-size: 0.83rem;
-    color: var(--muted);
-    line-height: 1.7;
-  }
-
-  /* PROJECTS */
-  .projects-list {
-    border: 1px solid var(--border);
-    display: flex;
-    flex-direction: column;
-  }
-
-  .project-row {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 0.4rem 2rem;
-    padding: 1.3rem 1.75rem;
-    border-bottom: 1px solid var(--border);
-    transition: background 0.15s;
-    align-items: start;
-  }
-
-  .project-row:last-child { border-bottom: none; }
-  .project-row:hover { background: var(--surface); }
-
-  .project-name {
-    font-weight: 700;
-    font-size: 0.9rem;
-    margin-bottom: 0.3rem;
-    color: #0f0f0f;
-  }
-
-  .project-desc {
-    font-size: 0.82rem;
-    color: var(--muted);
-    line-height: 1.65;
-  }
-
-  .project-tags {
-    display: flex;
-    gap: 0.35rem;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    padding-top: 0.1rem;
-  }
-
-  .tag {
-    font-family: var(--mono);
-    font-size: 0.6rem;
-    letter-spacing: 0.04em;
-    padding: 0.15rem 0.5rem;
-    background: var(--accent-light);
-    color: var(--accent);
-    white-space: nowrap;
-  }
-
-  .tag.gray {
-    background: #eeece8;
-    color: var(--muted);
-  }
-
-  .project-metric {
-    grid-column: 1 / -1;
-    font-family: var(--mono);
-    font-size: 0.68rem;
-    color: var(--accent);
-    margin-top: 0.5rem;
-    padding-top: 0.5rem;
-    border-top: 1px solid var(--border);
-  }
-
-  /* PUBLICATIONS */
-  .pub-list { display: flex; flex-direction: column; gap: 1.4rem; }
-
-  .pub-item {
-    display: grid;
-    grid-template-columns: 2.5rem 1fr;
-    gap: 0 1.25rem;
-  }
-
-  .pub-num {
-    font-family: var(--mono);
-    font-size: 0.68rem;
-    color: var(--border2);
-    padding-top: 0.15rem;
-  }
-
-  .pub-title {
-    font-weight: 600;
-    font-size: 0.88rem;
-    line-height: 1.45;
-    margin-bottom: 0.25rem;
-    color: #0f0f0f;
-  }
-
-  .pub-meta {
-    font-family: var(--mono);
-    font-size: 0.68rem;
-    color: var(--muted);
-  }
-
-  .pub-meta span { color: var(--accent); }
-
-  .pub-title a {
-    color: #0f0f0f;
-    text-decoration: none;
-    border-bottom: 1px solid var(--border2);
-    transition: border-color 0.15s, color 0.15s;
-  }
-
-  .pub-title a:hover {
-    color: var(--accent);
-    border-bottom-color: var(--accent);
-  }
-
-  /* SKILLS */
-  .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem 3rem;
-  }
-
-  .skill-label {
-    font-family: var(--mono);
-    font-size: 0.65rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 0.4rem;
-  }
-
-  .skill-items {
-    font-size: 0.83rem;
-    color: var(--text);
-    line-height: 1.6;
-  }
-
-  footer {
-    padding: 2.5rem 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .footer-name { font-weight: 600; font-size: 0.88rem; }
-
-  .footer-right {
-    font-family: var(--mono);
-    font-size: 0.68rem;
-    color: var(--muted);
-  }
-
-  @media (max-width: 640px) {
-    nav { padding: 0 1.25rem; }
-    .nav-links { display: none; }
-    .container { padding: 0 1.25rem; }
-    .hero { padding: 3rem 0 2.5rem; }
-    .hero h1 { font-size: 1.9rem; }
-    .skills-grid { grid-template-columns: 1fr; }
-    .exp-item, .edu-item { grid-template-columns: 1fr; }
-    .exp-date, .edu-date { text-align: left; margin-top: 0.25rem; }
-    .project-row { grid-template-columns: 1fr; }
-    .project-tags { justify-content: flex-start; margin-top: 0.5rem; }
-    footer { flex-direction: column; gap: 0.5rem; text-align: center; }
-  }
+:root {
+  --bg: #f7f6f3;
+  --surface: #ffffff;
+  --border: #e2e0da;
+  --border2: #d0cdc6;
+  --accent: #1a6b4a;
+  --accent-light: #e8f3ee;
+  --text: #1c1c1c;
+  --dark: #0f0f0f;
+  --muted: #6b6860;
+  --sans: 'IBM Plex Sans', sans-serif;
+  --mono: 'IBM Plex Mono', monospace;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--text); font-family: var(--sans); font-size: 15px; line-height: 1.6; }
+
+nav { position: sticky; top: 0; z-index: 100; background: var(--bg); border-bottom: 1px solid var(--border); padding: 0 3rem; display: flex; justify-content: space-between; align-items: center; height: 52px; }
+.nav-logo { font-family: var(--mono); font-size: 0.8rem; font-weight: 500; color: var(--dark); }
+.nav-links { display: flex; gap: 2.5rem; list-style: none; }
+.nav-links a { font-size: 0.8rem; color: var(--muted); text-decoration: none; transition: color 0.15s; }
+.nav-links a:hover { color: var(--accent); }
+
+.container { max-width: 860px; margin: 0 auto; padding: 0 2rem; }
+
+.hero { padding: 5rem 0 4rem; border-bottom: 1px solid var(--border); }
+.hero-tag { font-family: var(--mono); font-size: 0.72rem; color: var(--accent); letter-spacing: 0.06em; margin-bottom: 1.25rem; }
+.hero h1 { font-size: 2.6rem; font-weight: 700; letter-spacing: -0.03em; line-height: 1.15; margin-bottom: 1.25rem; color: var(--dark); }
+.hero-desc { font-size: 0.95rem; color: var(--muted); max-width: 520px; line-height: 1.75; margin-bottom: 2rem; }
+.hero-links { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+.btn { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.04em; padding: 0.55rem 1.1rem; text-decoration: none; transition: all 0.15s; border: 1px solid; }
+.btn-primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+.btn-primary:hover { opacity: 0.85; }
+.btn-secondary { background: transparent; color: var(--muted); border-color: var(--border2); }
+.btn-secondary:hover { color: var(--accent); border-color: var(--accent); }
+
+.section { padding: 3.5rem 0; border-bottom: 1px solid var(--border); }
+.section-label { font-family: var(--mono); font-size: 0.68rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #2a2a2a; margin-bottom: 2rem; display: flex; align-items: center; gap: 0.75rem; }
+.section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+.edu-list { display: flex; flex-direction: column; gap: 1.75rem; }
+.edu-item { display: grid; grid-template-columns: 1fr auto; }
+.edu-school { font-weight: 700; font-size: 0.92rem; color: var(--dark); }
+.edu-degree { font-size: 0.83rem; color: var(--muted); margin-top: 0.2rem; line-height: 1.5; }
+.edu-gpa { font-family: var(--mono); font-size: 0.68rem; color: var(--accent); margin-top: 0.3rem; }
+.edu-date { font-family: var(--mono); font-size: 0.68rem; color: var(--muted); text-align: right; white-space: nowrap; }
+
+.exp-list { display: flex; flex-direction: column; gap: 2.25rem; }
+.exp-item { display: grid; grid-template-columns: 1fr auto; gap: 0.2rem 1rem; }
+.exp-role { font-weight: 700; font-size: 0.92rem; color: var(--dark); }
+.exp-company { font-family: var(--mono); font-size: 0.7rem; color: var(--accent); margin-bottom: 0.75rem; }
+.exp-date { font-family: var(--mono); font-size: 0.68rem; color: var(--muted); text-align: right; white-space: nowrap; padding-top: 0.1rem; }
+.exp-bullets { grid-column: 1 / -1; list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+.exp-bullets li { font-size: 0.85rem; color: var(--muted); line-height: 1.7; padding-left: 1rem; position: relative; }
+.exp-bullets li::before { content: '\2013'; position: absolute; left: 0; color: var(--border2); }
+
+.research-list { display: flex; flex-direction: column; gap: 2rem; }
+.research-item { display: grid; grid-template-columns: 2.5rem 1fr; gap: 0 1.25rem; }
+.research-num { font-family: var(--mono); font-size: 0.68rem; color: var(--border2); padding-top: 0.15rem; }
+.research-title { font-weight: 700; font-size: 0.9rem; margin-bottom: 0.2rem; color: var(--dark); }
+.research-meta { font-family: var(--mono); font-size: 0.68rem; color: var(--accent); margin-bottom: 0.5rem; }
+.research-desc { font-size: 0.83rem; color: var(--muted); line-height: 1.7; }
+
+.projects-list { border: 1px solid var(--border); display: flex; flex-direction: column; }
+.project-row { display: grid; grid-template-columns: 1fr auto; gap: 0.4rem 2rem; padding: 1.3rem 1.75rem; border-bottom: 1px solid var(--border); transition: background 0.15s; align-items: start; }
+.project-row:last-child { border-bottom: none; }
+.project-row:hover { background: var(--surface); }
+.project-name { font-weight: 700; font-size: 0.9rem; margin-bottom: 0.3rem; color: var(--dark); }
+.project-desc { font-size: 0.82rem; color: var(--muted); line-height: 1.65; }
+.project-tags { display: flex; gap: 0.35rem; flex-wrap: wrap; justify-content: flex-end; padding-top: 0.1rem; }
+.tag { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.04em; padding: 0.15rem 0.5rem; background: var(--accent-light); color: var(--accent); white-space: nowrap; }
+.tag.gray { background: #eeece8; color: var(--muted); }
+.project-metric { grid-column: 1 / -1; font-family: var(--mono); font-size: 0.68rem; color: var(--accent); margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px solid var(--border); }
+
+.pub-list { display: flex; flex-direction: column; gap: 1.4rem; }
+.pub-item { display: grid; grid-template-columns: 2.5rem 1fr; gap: 0 1.25rem; }
+.pub-num { font-family: var(--mono); font-size: 0.68rem; color: var(--border2); padding-top: 0.15rem; }
+.pub-title { font-weight: 600; font-size: 0.88rem; line-height: 1.45; margin-bottom: 0.25rem; color: var(--dark); }
+.pub-title a { color: var(--dark); text-decoration: none; border-bottom: 1px solid var(--border2); transition: color 0.15s, border-color 0.15s; }
+.pub-title a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+.pub-meta { font-family: var(--mono); font-size: 0.68rem; color: var(--muted); }
+.pub-meta span { color: var(--accent); }
+
+.skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem 3rem; }
+.skill-label { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.4rem; }
+.skill-items { font-size: 0.83rem; color: var(--text); line-height: 1.6; }
+
+footer { padding: 2.5rem 0; display: flex; justify-content: space-between; align-items: center; }
+.footer-name { font-weight: 600; font-size: 0.88rem; }
+.footer-right { font-family: var(--mono); font-size: 0.68rem; color: var(--muted); }
+
+@media (max-width: 640px) {
+  nav { padding: 0 1.25rem; }
+  .nav-links { display: none; }
+  .container { padding: 0 1.25rem; }
+  .hero { padding: 3rem 0 2.5rem; }
+  .hero h1 { font-size: 1.9rem; }
+  .skills-grid { grid-template-columns: 1fr; }
+  .exp-item, .edu-item { grid-template-columns: 1fr; }
+  .exp-date, .edu-date { text-align: left; margin-top: 0.25rem; }
+  .project-row { grid-template-columns: 1fr; }
+  .project-tags { justify-content: flex-start; margin-top: 0.5rem; }
+  footer { flex-direction: column; gap: 0.5rem; text-align: center; }
+}
 </style>
 </head>
 <body>
@@ -455,22 +127,18 @@
 
 <div class="container">
 
-  <!-- HERO -->
   <div class="hero">
-    <div class="hero-tag">MS Computer Engineering · NC State · May 2026</div>
+    <div class="hero-tag">MS Computer Engineering &middot; NC State &middot; May 2026</div>
     <h1>Devesh Jani</h1>
-    <p class="hero-desc">
-      Hardware-aware systems software engineer. Working at the boundary of silicon and software — from RISC-V RTL and microarchitecture simulation to OS kernels, GPU compute, and inference systems.
-    </p>
+    <p class="hero-desc">Hardware-aware systems software engineer. Working at the boundary of silicon and software &mdash; from RISC-V RTL and microarchitecture simulation to OS kernels, GPU compute, and inference systems.</p>
     <div class="hero-links">
       <a href="https://www.linkedin.com/in/deveshjani" target="_blank" class="btn btn-primary">LinkedIn</a>
       <a href="https://github.com/deveshjani612" target="_blank" class="btn btn-secondary">GitHub</a>
-      <a href="/cdn-cgi/l/email-protection#0c6864666d62653e4c626f7f7922696879" class="btn btn-secondary"><span class="__cf_email__" data-cfemail="ea8e82808b8483d8aa8489999fc48f8e9f">[email&#160;protected]</span></a>
+      <a href="mailto:dhjani2 [at] ncsu [dot] edu" class="btn btn-secondary">dhjani2 [at] ncsu.edu</a>
       <a href="tel:+19195205927" class="btn btn-secondary">+1 (919) 520-5927</a>
     </div>
   </div>
 
-  <!-- EDUCATION -->
   <div class="section" id="education">
     <div class="section-label">Education</div>
     <div class="edu-list">
@@ -478,7 +146,7 @@
         <div>
           <div class="edu-school">North Carolina State University</div>
           <div class="edu-degree">M.S. in Computer Engineering</div>
-          <div class="edu-degree" style="font-size:0.78rem; margin-top:0.35rem;">Advanced Verification with UVM · GPU Architecture · Operating Systems · Microprocessor Architecture · CPU Performance & Security · ASIC/FPGA Design</div>
+          <div class="edu-degree" style="font-size:0.78rem;margin-top:0.35rem;">Advanced Verification with UVM &middot; GPU Architecture &middot; Operating Systems &middot; Microprocessor Architecture &middot; CPU Performance &amp; Security &middot; ASIC/FPGA Design</div>
           <div class="edu-gpa">GPA 3.52 / 4.0</div>
         </div>
         <div class="edu-date">Raleigh, NC<br>May 2026</div>
@@ -486,7 +154,7 @@
       <div class="edu-item">
         <div>
           <div class="edu-school">Charotar University of Science and Technology</div>
-          <div class="edu-degree">B.Tech in Electronics & Communication Engineering</div>
+          <div class="edu-degree">B.Tech in Electronics &amp; Communication Engineering</div>
           <div class="edu-gpa">CGPA 9.05 / 10.0</div>
         </div>
         <div class="edu-date">Anand, India<br>May 2024</div>
@@ -494,248 +162,183 @@
     </div>
   </div>
 
-  <!-- EXPERIENCE -->
   <div class="section" id="experience">
     <div class="section-label">Experience</div>
     <div class="exp-list">
-
       <div class="exp-item">
         <div>
           <div class="exp-role">SoC Design Intern</div>
-          <div class="exp-company">Western Semiconductor · Tempe, AZ</div>
+          <div class="exp-company">Western Semiconductor &middot; Tempe, AZ</div>
         </div>
-        <div class="exp-date">Jun – Aug 2025</div>
+        <div class="exp-date">Jun &ndash; Aug 2025</div>
         <ul class="exp-bullets">
           <li>Designed and integrated a RISC-V RVV 1.0 compliant VPU with multi-lane vector register file; developed Verilog RTL for lane sequencer and writeback stage, optimizing memory banking and parallel lane access using Verilator.</li>
           <li>Built C++ simulation testbench for the VRF with dual-read and conflict detection logic; implemented SVA assertions for functional correctness and generated VCD waveforms for RTL verification.</li>
         </ul>
       </div>
-
       <div class="exp-item">
         <div>
           <div class="exp-role">Research Intern</div>
-          <div class="exp-company">Indian Space Research Organization (ISRO) · Ahmedabad, India</div>
+          <div class="exp-company">Indian Space Research Organization (ISRO) &middot; Ahmedabad, India</div>
         </div>
-        <div class="exp-date">Dec 2023 – May 2024</div>
+        <div class="exp-date">Dec 2023 &ndash; May 2024</div>
         <ul class="exp-bullets">
-          <li>Developed and tested embedded firmware for a Moving Average FIR filter on ProASIC3 FPGA; integrated external SRAM for pixel buffering and handled timing synchronization at 50 MHz, validated against MATLAB golden model within ±1 LSB.</li>
+          <li>Developed and tested embedded firmware for a Moving Average FIR filter on ProASIC3 FPGA; integrated external SRAM for pixel buffering and handled timing synchronization at 50 MHz, validated against MATLAB golden model within &plusmn;1 LSB.</li>
           <li>Contributed to system bring-up and bench-level hardware validation, debugging embedded firmware across ADC, GPIO, SPI, and PWM peripherals.</li>
         </ul>
       </div>
-
     </div>
   </div>
 
-  <!-- RESEARCH -->
   <div class="section" id="research">
     <div class="section-label">Research</div>
     <div class="research-list">
-
       <div class="research-item">
         <div class="research-num">01</div>
         <div>
           <div class="research-title">Microarchitectural Characterization of SMT Contention Channels under AI Workloads</div>
-          <div class="research-meta">NC State University · Nov 2025 – Dec 2025 · Completed</div>
+          <div class="research-meta">NC State University &middot; Nov 2025 &ndash; Dec 2025 &middot; Completed</div>
           <div class="research-desc">Characterized how CNN, RNN, and Transformer inference workloads running as SMT siblings produce distinct contention signatures across BTB, PHT, ROB, register file, TLB, caches, and hardware prefetchers. Designed targeted microbenchmarks and collected timing, performance-counter, and core-frequency traces to quantify workload separability. Evaluated interaction between dynamic frequency scaling (TurboBoost) and microarchitectural leakage.</div>
         </div>
       </div>
-
       <div class="research-item">
         <div class="research-num">02</div>
         <div>
-          <div class="research-title">Microarchitecture Reverse Engineering & Performance Analysis</div>
-          <div class="research-meta">NC State University · 2025 · Completed</div>
+          <div class="research-title">Microarchitecture Reverse Engineering &amp; Performance Analysis</div>
+          <div class="research-meta">NC State University &middot; 2025 &middot; Completed</div>
           <div class="research-desc">Reverse engineered cache, BTB, TLB, and ROB behavior using timing-based side-channel microbenchmarks; analyzed performance differences across page sizes and AMX vs CPU/GPU execution paths.</div>
         </div>
       </div>
-
       <div class="research-item">
         <div class="research-num">03</div>
         <div>
-          <div class="research-title">Linux Memory Management & Page Allocation Analysis</div>
-          <div class="research-meta">NC State University — Operating Systems Research Assistant · Oct 2025 – Dec 2025 · Completed</div>
+          <div class="research-title">Linux Memory Management &amp; Page Allocation Analysis</div>
+          <div class="research-meta">NC State University &mdash; Operating Systems Research Assistant &middot; Oct 2025 &ndash; Dec 2025 &middot; Completed</div>
           <div class="research-desc">Built BCC/eBPF tools to trace page faults, virtual-to-physical translations, and PFN allocation inside QEMU guest VMs; correlated kernel-traced events with physical memory dumps to analyze page table dynamics and ASLR effects. Developed reproducible workflows by pausing VMs, dumping physical memory, and correlating dumps with traced kernel events.</div>
         </div>
       </div>
-
     </div>
   </div>
 
-  <!-- PROJECTS -->
   <div class="section" id="projects">
     <div class="section-label">Projects</div>
     <div class="projects-list">
-
       <div class="project-row">
         <div>
-          <div class="project-name">GPGPU-Sim Performance & Functional Analysis</div>
+          <div class="project-name">GPGPU-Sim Performance &amp; Functional Analysis</div>
           <div class="project-desc">Modified functional simulator instruction semantics; instrumented divergence and memory access counters to analyze GPU architectural behavior and bottlenecks. Characterized warp divergence and memory access patterns across workloads.</div>
         </div>
-        <div class="project-tags">
-          <span class="tag">CUDA</span>
-          <span class="tag">C++</span>
-          <span class="tag gray">GPU Arch</span>
-        </div>
+        <div class="project-tags"><span class="tag">CUDA</span><span class="tag">C++</span><span class="tag gray">GPU Arch</span></div>
       </div>
-
       <div class="project-row">
         <div>
           <div class="project-name">Scaled Dot-Product Self-Attention Hardware</div>
           <div class="project-desc">Implemented Q/K/V matrix multiply datapaths for Transformer self-attention in Verilog; synthesized design targeting memory-mapped SRAM structures for inference workloads.</div>
-          <div class="project-metric">9k gate area · 2752 cycles · 11.2 ns clock period</div>
+          <div class="project-metric">9k gate area &middot; 2752 cycles &middot; 11.2 ns clock period</div>
         </div>
-        <div class="project-tags">
-          <span class="tag">Verilog</span>
-          <span class="tag">ModelSim</span>
-          <span class="tag gray">Transformers</span>
-        </div>
+        <div class="project-tags"><span class="tag">Verilog</span><span class="tag">ModelSim</span><span class="tag gray">Transformers</span></div>
       </div>
-
       <div class="project-row">
         <div>
           <div class="project-name">Superscalar Out-of-Order Pipeline Simulator</div>
           <div class="project-desc">Implemented Tomasulo-based superscalar simulator with register renaming (AMT/RMT, physical free list, active list) and precise state recovery; modeled fetch, issue, and writeback for N-wide configurations. Swept ROB depth, RS size, and pipeline width to characterize IPC behavior.</div>
         </div>
-        <div class="project-tags">
-          <span class="tag">C++</span>
-          <span class="tag gray">RISC-V</span>
-          <span class="tag gray">OoO</span>
-        </div>
+        <div class="project-tags"><span class="tag">C++</span><span class="tag gray">RISC-V</span><span class="tag gray">OoO</span></div>
       </div>
-
       <div class="project-row">
         <div>
-          <div class="project-name">Register Renaming & Branch Misprediction Recovery</div>
-          <div class="project-desc">Implemented register renaming module (AMT/RMT, physical free list, active list) for a superscalar OoO pipeline; supported precise state recovery on branch misprediction via checkpointing and rollback of rename tables. Validated correctness under real branch prediction — IPC matched reference implementation within 1%.</div>
+          <div class="project-name">Register Renaming &amp; Branch Misprediction Recovery</div>
+          <div class="project-desc">Implemented register renaming module (AMT/RMT, physical free list, active list) for a superscalar OoO pipeline; supported precise state recovery on branch misprediction via checkpointing and rollback of rename tables. Validated correctness under real branch prediction &mdash; IPC matched reference implementation within 1%.</div>
         </div>
-        <div class="project-tags">
-          <span class="tag">C++</span>
-          <span class="tag gray">Microarch</span>
-        </div>
+        <div class="project-tags"><span class="tag">C++</span><span class="tag gray">Microarch</span></div>
       </div>
-
       <div class="project-row">
         <div>
           <div class="project-name">Demand-Paged Virtual Memory Subsystem</div>
           <div class="project-desc">Implemented demand paging in Xinu OS: extended xmmap/xmunmap, private virtual heaps, Second-Chance and Aging page replacement with page-fault ISR handling; optimized TLB behavior and backing-store mappings. Chose Second-Chance for O(1) per-fault overhead under Xinu's non-preemptive scheduling constraints.</div>
         </div>
-        <div class="project-tags">
-          <span class="tag">C</span>
-          <span class="tag gray">OS · Xinu</span>
-        </div>
+        <div class="project-tags"><span class="tag">C</span><span class="tag gray">OS &middot; Xinu</span></div>
       </div>
-
       <div class="project-row">
         <div>
           <div class="project-name">Process Scheduling in Xinu OS</div>
           <div class="project-desc">Implemented two starvation-avoiding schedulers (exponential distribution and Linux 2.2 epoch/goodness); extended proc table with quantum, goodness, and epoch fields and modified ready queue and rescheduling logic accordingly.</div>
         </div>
-        <div class="project-tags">
-          <span class="tag">C</span>
-          <span class="tag gray">Kernel</span>
-        </div>
+        <div class="project-tags"><span class="tag">C</span><span class="tag gray">Kernel</span></div>
       </div>
-
       <div class="project-row">
         <div>
           <div class="project-name">Branch Predictor Simulator</div>
           <div class="project-desc">Designed and evaluated bimodal, gshare, and hybrid predictors; implemented chooser table for dynamic selection based on branch behavior. Characterized scenarios where global history correlation outperforms local counters.</div>
         </div>
-        <div class="project-tags">
-          <span class="tag">C++</span>
-          <span class="tag gray">Branch Prediction</span>
-        </div>
+        <div class="project-tags"><span class="tag">C++</span><span class="tag gray">Branch Prediction</span></div>
       </div>
-
       <div class="project-row">
         <div>
-          <div class="project-name">Cache & Memory Hierarchy Simulator</div>
+          <div class="project-name">Cache &amp; Memory Hierarchy Simulator</div>
           <div class="project-desc">Developed L1/L2 cache simulator supporting write-back/write-allocate, LRU replacement, and prefetching; evaluated SPEC benchmark performance under varying cache configurations.</div>
         </div>
-        <div class="project-tags">
-          <span class="tag">C++</span>
-          <span class="tag gray">Memory</span>
-        </div>
+        <div class="project-tags"><span class="tag">C++</span><span class="tag gray">Memory</span></div>
       </div>
-
       <div class="project-row">
         <div>
           <div class="project-name">LC3 Microprocessor Verification</div>
           <div class="project-desc">Built UVMF-based testbench verifying all pipelined stages of the LC3; implemented covergroups, coverpoints, and directed tests for coverage closure.</div>
           <div class="project-metric">95% functional coverage</div>
         </div>
-        <div class="project-tags">
-          <span class="tag">SystemVerilog</span>
-          <span class="tag gray">UVMF · UVM</span>
-        </div>
+        <div class="project-tags"><span class="tag">SystemVerilog</span><span class="tag gray">UVMF &middot; UVM</span></div>
       </div>
-
       <div class="project-row">
         <div>
           <div class="project-name">I2C Multi-Bus Controller Verification</div>
           <div class="project-desc">Designed layered testbench (generator, driver, monitor, predictor, scoreboard) for I2CMB; achieved coverage closure via constrained-random tests, SVA assertions, and cross coverage.</div>
         </div>
-        <div class="project-tags">
-          <span class="tag">SystemVerilog</span>
-          <span class="tag gray">I2C</span>
-        </div>
+        <div class="project-tags"><span class="tag">SystemVerilog</span><span class="tag gray">I2C</span></div>
       </div>
-
       <div class="project-row">
         <div>
           <div class="project-name">Unix File System Defragmenter</div>
           <div class="project-desc">Developing a C-based Unix filesystem defragmenter that reorganizes inode and data-block layouts for contiguous on-disk storage; implementing low-level binary I/O and pointer-block reconstruction across direct, single, double, and triple indirect blocks.</div>
         </div>
-        <div class="project-tags">
-          <span class="tag">C</span>
-          <span class="tag gray">Filesystems</span>
-        </div>
+        <div class="project-tags"><span class="tag">C</span><span class="tag gray">Filesystems</span></div>
       </div>
-
     </div>
   </div>
 
-  <!-- PUBLICATIONS -->
   <div class="section" id="publications">
     <div class="section-label">Publications</div>
     <div class="pub-list">
-
       <div class="pub-item">
         <div class="pub-num">01</div>
         <div>
           <div class="pub-title"><a href="https://link.springer.com/epdf/10.1007/978-3-031-56388-1_13?sharing_token=nPj_cmKNuJb_DwDDZZ1Rnfe4RwlQNchNByi7wbcMAY7T7XNdUTQ4Wwp_g-kk_Vy-KeRiVKRe6J0-O0GpD9eotRd6fgRmEXU9S7JqtC7iWlsxLnr3TUya3cN458QGWgq2dRRW223ewrnARLXSFuhP0tqBIwT7lXTOpPIOHQW-X9A%3D" target="_blank">From Above and Beyond: Decoding Urban Aesthetics with the Visual Pollution Index</a></div>
-          <div class="pub-meta"><span>Springer</span> · Jul 14, 2024</div>
+          <div class="pub-meta"><span>Springer</span> &middot; Jul 14, 2024</div>
         </div>
       </div>
-
       <div class="pub-item">
         <div class="pub-num">02</div>
         <div>
           <div class="pub-title"><a href="https://ieeexplore.ieee.org/abstract/document/10531529" target="_blank">Enhancing Port Surveillance: A Dual-Drone System for Monitoring Vessels and Detecting Encroachments</a></div>
-          <div class="pub-meta"><span>IEEE</span> · May 21, 2024</div>
+          <div class="pub-meta"><span>IEEE</span> &middot; May 21, 2024</div>
         </div>
       </div>
-
       <div class="pub-item">
         <div class="pub-num">03</div>
         <div>
           <div class="pub-title"><a href="https://ieeexplore.ieee.org/document/10426431" target="_blank">AI-Enhanced Quad-Wheeled Robot for Targeted Plant Disease Surveillance in Greenhouses</a></div>
-          <div class="pub-meta"><span>IEEE</span> · Apr 18, 2024</div>
+          <div class="pub-meta"><span>IEEE</span> &middot; Apr 18, 2024</div>
         </div>
       </div>
-
       <div class="pub-item">
         <div class="pub-num">04</div>
         <div>
-          <div class="pub-title"><a href="https://www.publications.scrs.in/chapter/978-81-955020-2-8/40" target="_blank">IoT System for Monitoring Sensors' Data using Arduino Mega Wi-Fi, Firebase, Nextion Display and Django</a></div>
-          <div class="pub-meta"><span>SCRS Proceedings</span> · Oct 17, 2023 · 2nd International Conference</div>
+          <div class="pub-title"><a href="https://www.publications.scrs.in/chapter/978-81-955020-2-8/40" target="_blank">IoT System for Monitoring Sensors Data using Arduino Mega Wi-Fi, Firebase, Nextion Display and Django</a></div>
+          <div class="pub-meta"><span>SCRS Proceedings</span> &middot; Oct 17, 2023 &middot; 2nd International Conference</div>
         </div>
       </div>
-
     </div>
   </div>
 
-  <!-- SKILLS -->
   <div class="section" id="skills">
     <div class="section-label">Skills</div>
     <div class="skills-grid">
@@ -744,7 +347,7 @@
         <div class="skill-items">C, C++, Rust, Python, SystemVerilog, Verilog, Perl, TCL</div>
       </div>
       <div>
-        <div class="skill-label">Compute & GPU</div>
+        <div class="skill-label">Compute &amp; GPU</div>
         <div class="skill-items">CUDA, OpenCL, MPI, OpenMP, Vulkan, OpenGL, GPGPU-Sim</div>
       </div>
       <div>
@@ -752,23 +355,23 @@
         <div class="skill-items">RISC-V (RVV 1.0), OoO Pipeline, Tomasulo, Branch Prediction, Cache Hierarchy, SMT</div>
       </div>
       <div>
-        <div class="skill-label">OS & Low-Level</div>
+        <div class="skill-label">OS &amp; Low-Level</div>
         <div class="skill-items">Linux Kernel, eBPF / BCC, QEMU, Virtual Memory, Page Tables, Process Scheduling</div>
       </div>
       <div>
-        <div class="skill-label">Verification & Tools</div>
+        <div class="skill-label">Verification &amp; Tools</div>
         <div class="skill-items">UVM / UVMF, SVA, Verilator, ModelSim, Vivado, Libero IDE, GDB, Jenkins, Docker</div>
       </div>
       <div>
         <div class="skill-label">Protocols</div>
-        <div class="skill-items">PCIe, I²C, SPI, UART, CAN, AHB/APB, Ethernet</div>
+        <div class="skill-items">PCIe, I2C, SPI, UART, CAN, AHB/APB, Ethernet</div>
       </div>
     </div>
   </div>
 
   <footer>
     <div class="footer-name">Devesh Hiteshbhai Jani</div>
-    <div class="footer-right">Raleigh, NC · dhjani2@ncsu.edu</div>
+    <div class="footer-right">Raleigh, NC &middot; dhjani2 [at] ncsu.edu</div>
   </footer>
 
 </div>
