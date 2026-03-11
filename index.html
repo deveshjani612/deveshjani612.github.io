@@ -130,7 +130,7 @@ footer { padding: 2.5rem 0; display: flex; justify-content: space-between; align
   <div class="hero">
     <div class="hero-tag">MS Computer Engineering &middot; NC State &middot; May 2026</div>
     <h1>Devesh Jani</h1>
-    <p class="hero-desc">Hardware-aware systems software engineer. Working at the boundary of silicon and software &mdash; from RISC-V RTL and microarchitecture simulation to OS kernels, GPU compute, and inference systems.</p>
+    <p class="hero-desc">Aspiring to be Hardware Engineer with an strong interest in Microarchicture. Experienced in Software as well as hardware &mdash; from RISC-V RTL design to pipelined processor verification and FPGA-based digital design.</p>
     <div class="hero-links">
       <a href="https://www.linkedin.com/in/deveshjani" target="_blank" class="btn btn-primary">LinkedIn</a>
       <a href="https://github.com/deveshjani612" target="_blank" class="btn btn-secondary">GitHub</a>
@@ -225,10 +225,18 @@ footer { padding: 2.5rem 0; display: flex; justify-content: space-between; align
     <div class="projects-list">
       <div class="project-row">
         <div>
-          <div class="project-name">GPGPU-Sim Performance &amp; Functional Analysis</div>
-          <div class="project-desc">Modified functional simulator instruction semantics; instrumented divergence and memory access counters to analyze GPU architectural behavior and bottlenecks. Characterized warp divergence and memory access patterns across workloads.</div>
+          <div class="project-name">LC3 Microprocessor Verification</div>
+          <div class="project-desc">Built UVMF-based testbench verifying all pipelined stages of the LC3; implemented covergroups, coverpoints, and directed tests for coverage closure.</div>
+          <div class="project-metric">95% functional coverage</div>
         </div>
-        <div class="project-tags"><span class="tag">CUDA</span><span class="tag">C++</span><span class="tag gray">GPU Arch</span></div>
+        <div class="project-tags"><span class="tag">SystemVerilog</span><span class="tag gray">UVMF &middot; UVM</span></div>
+      </div>
+      <div class="project-row">
+        <div>
+          <div class="project-name">I2C Multi-Bus Controller Verification</div>
+          <div class="project-desc">Designed layered testbench (generator, driver, monitor, predictor, scoreboard) for I2CMB; achieved coverage closure via constrained-random tests, SVA assertions, and cross coverage.</div>
+        </div>
+        <div class="project-tags"><span class="tag">SystemVerilog</span><span class="tag gray">I2C</span></div>
       </div>
       <div class="project-row">
         <div>
@@ -254,6 +262,27 @@ footer { padding: 2.5rem 0; display: flex; justify-content: space-between; align
       </div>
       <div class="project-row">
         <div>
+          <div class="project-name">Branch Predictor Simulator</div>
+          <div class="project-desc">Designed and evaluated bimodal, gshare, and hybrid predictors; implemented chooser table for dynamic selection based on branch behavior. Characterized scenarios where global history correlation outperforms local counters.</div>
+        </div>
+        <div class="project-tags"><span class="tag">C++</span><span class="tag gray">Branch Prediction</span></div>
+      </div>
+      <div class="project-row">
+        <div>
+          <div class="project-name">GPGPU-Sim Performance &amp; Functional Analysis</div>
+          <div class="project-desc">Modified functional simulator instruction semantics; instrumented divergence and memory access counters to analyze GPU architectural behavior and bottlenecks. Characterized warp divergence and memory access patterns across workloads.</div>
+        </div>
+        <div class="project-tags"><span class="tag">CUDA</span><span class="tag">C++</span><span class="tag gray">GPU Arch</span></div>
+      </div>
+      <div class="project-row">
+        <div>
+          <div class="project-name">Cache &amp; Memory Hierarchy Simulator</div>
+          <div class="project-desc">Developed L1/L2 cache simulator supporting write-back/write-allocate, LRU replacement, and prefetching; evaluated SPEC benchmark performance under varying cache configurations.</div>
+        </div>
+        <div class="project-tags"><span class="tag">C++</span><span class="tag gray">Memory</span></div>
+      </div>
+      <div class="project-row">
+        <div>
           <div class="project-name">Demand-Paged Virtual Memory Subsystem</div>
           <div class="project-desc">Implemented demand paging in Xinu OS: extended xmmap/xmunmap, private virtual heaps, Second-Chance and Aging page replacement with page-fault ISR handling; optimized TLB behavior and backing-store mappings. Chose Second-Chance for O(1) per-fault overhead under Xinu's non-preemptive scheduling constraints.</div>
         </div>
@@ -265,35 +294,6 @@ footer { padding: 2.5rem 0; display: flex; justify-content: space-between; align
           <div class="project-desc">Implemented two starvation-avoiding schedulers (exponential distribution and Linux 2.2 epoch/goodness); extended proc table with quantum, goodness, and epoch fields and modified ready queue and rescheduling logic accordingly.</div>
         </div>
         <div class="project-tags"><span class="tag">C</span><span class="tag gray">Kernel</span></div>
-      </div>
-      <div class="project-row">
-        <div>
-          <div class="project-name">Branch Predictor Simulator</div>
-          <div class="project-desc">Designed and evaluated bimodal, gshare, and hybrid predictors; implemented chooser table for dynamic selection based on branch behavior. Characterized scenarios where global history correlation outperforms local counters.</div>
-        </div>
-        <div class="project-tags"><span class="tag">C++</span><span class="tag gray">Branch Prediction</span></div>
-      </div>
-      <div class="project-row">
-        <div>
-          <div class="project-name">Cache &amp; Memory Hierarchy Simulator</div>
-          <div class="project-desc">Developed L1/L2 cache simulator supporting write-back/write-allocate, LRU replacement, and prefetching; evaluated SPEC benchmark performance under varying cache configurations.</div>
-        </div>
-        <div class="project-tags"><span class="tag">C++</span><span class="tag gray">Memory</span></div>
-      </div>
-      <div class="project-row">
-        <div>
-          <div class="project-name">LC3 Microprocessor Verification</div>
-          <div class="project-desc">Built UVMF-based testbench verifying all pipelined stages of the LC3; implemented covergroups, coverpoints, and directed tests for coverage closure.</div>
-          <div class="project-metric">95% functional coverage</div>
-        </div>
-        <div class="project-tags"><span class="tag">SystemVerilog</span><span class="tag gray">UVMF &middot; UVM</span></div>
-      </div>
-      <div class="project-row">
-        <div>
-          <div class="project-name">I2C Multi-Bus Controller Verification</div>
-          <div class="project-desc">Designed layered testbench (generator, driver, monitor, predictor, scoreboard) for I2CMB; achieved coverage closure via constrained-random tests, SVA assertions, and cross coverage.</div>
-        </div>
-        <div class="project-tags"><span class="tag">SystemVerilog</span><span class="tag gray">I2C</span></div>
       </div>
       <div class="project-row">
         <div>
