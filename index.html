@@ -130,7 +130,7 @@ footer { padding: 2.5rem 0; display: flex; justify-content: space-between; align
   <div class="hero">
     <div class="hero-tag">MS Computer Engineering &middot; NC State &middot; May 2026</div>
     <h1>Devesh Jani</h1>
-    <p class="hero-desc">Aspiring to be a Hardware Engineer with an strong interest in Microarchitecture. Experienced in Software as well as hardware &mdash; from RISC-V RTL design to pipelined processor verification and FPGA-based digital design.</p>
+    <p class="hero-desc">Hardware engineer with a background spanning RTL design, design verification, and systems software. Experienced in UVM/UVMF testbench architecture, SystemVerilog assertions, RISC-V processor design, microarchitecture simulation, and OS-level systems programming.</p>
     <div class="hero-links">
       <a href="https://www.linkedin.com/in/deveshjani" target="_blank" class="btn btn-primary">LinkedIn</a>
       <a href="https://github.com/deveshjani612" target="_blank" class="btn btn-secondary">GitHub</a>
@@ -196,13 +196,21 @@ footer { padding: 2.5rem 0; display: flex; justify-content: space-between; align
       <div class="research-item">
         <div class="research-num">01</div>
         <div>
+          <div class="research-title">Value Prediction in Out-of-Order Processors (Stride Value Predictor + VPQ)</div>
+          <div class="research-meta">NC State University &middot; Mar 2026 &ndash; Present &middot; In Progress</div>
+          <div class="research-desc">Implementing a Stride Value Predictor (SVP) with Value Prediction Queue (VPQ) in a cycle-accurate OoO superscalar simulator; supporting value prediction injection at Dispatch to break data dependencies between producers and consumers. Implementing confidence estimation, value misprediction detection at Execute, and VR-1 squash-based recovery. Exploring oracle confidence mode and perfect value prediction mode for performance upper-bound analysis.</div>
+        </div>
+      </div>
+      <div class="research-item">
+        <div class="research-num">02</div>
+        <div>
           <div class="research-title">Microarchitectural Characterization of SMT Contention Channels under AI Workloads</div>
           <div class="research-meta">NC State University &middot; Nov 2025 &ndash; Dec 2025 &middot; Completed</div>
           <div class="research-desc">Characterized how CNN, RNN, and Transformer inference workloads running as SMT siblings produce distinct contention signatures across BTB, PHT, ROB, register file, TLB, caches, and hardware prefetchers. Designed targeted microbenchmarks and collected timing, performance-counter, and core-frequency traces to quantify workload separability. Evaluated interaction between dynamic frequency scaling (TurboBoost) and microarchitectural leakage.</div>
         </div>
       </div>
       <div class="research-item">
-        <div class="research-num">02</div>
+        <div class="research-num">03</div>
         <div>
           <div class="research-title">Microarchitecture Reverse Engineering &amp; Performance Analysis</div>
           <div class="research-meta">NC State University &middot; 2025 &middot; Completed</div>
@@ -210,7 +218,7 @@ footer { padding: 2.5rem 0; display: flex; justify-content: space-between; align
         </div>
       </div>
       <div class="research-item">
-        <div class="research-num">03</div>
+        <div class="research-num">04</div>
         <div>
           <div class="research-title">Linux Memory Management &amp; Page Allocation Analysis</div>
           <div class="research-meta">NC State University &mdash; Operating Systems Research Assistant &middot; Oct 2025 &ndash; Dec 2025 &middot; Completed</div>
@@ -344,15 +352,11 @@ footer { padding: 2.5rem 0; display: flex; justify-content: space-between; align
     <div class="skills-grid">
       <div>
         <div class="skill-label">Languages</div>
-        <div class="skill-items">C, C++, Rust, Python, SystemVerilog, Verilog, Perl, TCL</div>
-      </div>
-      <div>
-        <div class="skill-label">Compute &amp; GPU</div>
-        <div class="skill-items">CUDA, OpenCL, MPI, OpenMP, Vulkan, OpenGL, GPGPU-Sim</div>
+        <div class="skill-items">C, C++, Python, SystemVerilog, Verilog, UVM</div>
       </div>
       <div>
         <div class="skill-label">Architecture</div>
-        <div class="skill-items">RISC-V (RVV 1.0), OoO Pipeline, Tomasulo, Branch Prediction, Cache Hierarchy, SMT</div>
+        <div class="skill-items">RISC-V, OoO Pipeline, Tomasulo, Branch Prediction, Cache Hierarchy, SMT</div>
       </div>
       <div>
         <div class="skill-label">OS &amp; Low-Level</div>
@@ -360,7 +364,7 @@ footer { padding: 2.5rem 0; display: flex; justify-content: space-between; align
       </div>
       <div>
         <div class="skill-label">Verification &amp; Tools</div>
-        <div class="skill-items">UVM / UVMF, SVA, Verilator, ModelSim, Vivado, Libero IDE, GDB, Jenkins, Docker</div>
+        <div class="skill-items">UVM / UVMF, Verilator, ModelSim, Vivado, Libero IDE, CUDA, GPGPU-Sim, GDB, Docker</div>
       </div>
       <div>
         <div class="skill-label">Protocols</div>
